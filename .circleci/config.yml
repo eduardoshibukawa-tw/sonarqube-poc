@@ -22,12 +22,12 @@ jobs:
           paths:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "./build.gradle" }}
-#      - run:
-#          name: Build and run tests
-#          command: ./gradlew build jacocoTestReport
-#      - run:
-#          name: Analyze on Sonarqube
-#          command: ./gradlew sonarqube
+      - run:
+          name: Build and run tests
+          command: ./gradlew build jacocoTestReport
+      - run:
+          name: Analyze on Sonarqube
+          command: ./gradlew sonarqube
 workflows:
   main:
     jobs:
