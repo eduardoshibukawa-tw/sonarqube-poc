@@ -17,4 +17,9 @@ class GrettingControllerTest {
     void shouldReturnHello() {
         assertEquals("Hello!", grettingController.gretting());
     }
+
+    @Test
+    void shouldReturnOiee() {
+        assertEquals("Oiee!", grettingController.oie());
+    }
 }
