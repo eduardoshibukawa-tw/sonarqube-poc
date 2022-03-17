@@ -11,4 +11,9 @@ public class GrettingController {
     public String gretting() {
         return "Hello!";
     }
+
+    @GetMapping("oie")
+    public String oie() {
+        return "Oiee!";
+    }
 }
