@@ -12,6 +12,7 @@ sonarqube {
 		property "sonar.organization", "eduardoshibukawa-tw"
 		property "sonar.host.url", "https://sonarcloud.io"
 		property "sonar.exclusions", "**/*Generated.java"
+		property "sonar.qualitygate.wait", "true"
 	}
 }
 
@@ -34,6 +35,8 @@ tasks.named('test') {
 
 jacocoTestReport {
 	reports {
-		xml.enabled true
+		xml.required = true
+		csv.required = false
+		html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
 	}
 }
